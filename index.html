@@ -119,12 +119,12 @@
 	   
 	<div class="article-header">
 	    
-		<a class="article-title" href="/Jetmet/2018/09/17/hello-world/">Hello World</a>  
+		<a class="article-title" href="/Jetmet/2018/09/18/hexo搭建/">hexo 搭建和部署以及出错的原因</a>  
 	       
 		 
 
 		<div class="article-meta">
-			<time>9月 17, 2018</time>
+			<time>9月 18, 2018</time>
 			
 		</div>
 	</div>
@@ -135,21 +135,19 @@
     
 	<div class="typo article-excerpt">	
 		 
-			<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+			<h3 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h3><p>建一个关于已hexo为平台的博客网站，官方中文<br>文档网址为<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/</a>；参考里面的要求一步步进行安装<br>1.电脑上必须安装有 Node.js 和Git应用，因为hexo是搭载在这两个平台上<br>进行运行的，<br>2.安装完成以上两部后，你可以在自己想要把你的博客放置到您任意的硬盘上，<br>新建文件夹，（但最好不要放置在C盘上）。在新建的文件上使用git bash在这个文件夹里面<br>进行安装hexo 指令{ $ npm install -g hexo-cli}<br>3.初始化hexo{ $ hexo init } ,配置node {$ npm install },加载hexo{$ hexo g},此时会将hexo经典默认的模板生成一个public文件夹，里面的东西来自于source，当你点击public里index.html里面出来的东西是个 无样式的页面，因为在本地我们需要启动服务器才能运行，<br>4.启动服务器{$ hexo s}此时命令框上会显示出让你将localhost:4000地址复制到浏览器窗口上，并成功显示出了你的主题模板的样式结构，到此您的hexo初步已经圆满成功</p>
+<p>接下来，hexo官方给我们提供了各种不同主题模板，你也可以上github上搜索自己喜欢的主题模板，人家下载下来，将模板放置到你之前新建博客的文件中的theme文件中，放置好后，我们需要配置加载，所以找到_config.yml（很多重要的配置都是在这个文件进行修改）文件<img src="clipboard.png" alt=""></p>
+<p>将文件中的theme改成你下载好的主题文件夹名称，文件夹注意不要使用特殊符号；<br>然后再次运行服务器，就可以看到你下载的主题框架结构了</p>
+<p>然而对于hexo主题框架，一般提供给我们的页面有archives，但当我们自己新建自己需要的页面的时候，可以在根目录进行使用命令{$ hexo new page 你的页面名}，然后还要在两个地方进行修改，<br>第一 个是根目录上的    \source\你的页面名 修改md文件，比如关于about页面<img src="clipboard1.png" alt=""></p>
+<p>第二步则是在根目录\thjeme(对应主题名)_config.yml 打开 找到menu添加导航菜单</p>
+<p><img src="clipboard2.png" alt=""></p>
+<h3 id="第一阶段总结"><a href="#第一阶段总结" class="headerlink" title="第一阶段总结"></a>第一阶段总结</h3><p>：由以上的操作，我们可以总结得出，在你需要修改关于主题的一些图片、名称样式等的时候，都是在主题目录上的配置项进行修改，而当你部署整个项目的时候则是在根目录下的配置文件进行更改和部署（还有一点就是当我们把基本的样式和部署都修改完成之后，我们只需要在根目录上修改源文件source里对应的页面文件夹中修改对应的md文件，使用的markdown格式进行的修改，可以下载Typora或者在CSDN博客网上进行新建博客文，使用的都是markdown格式进行书写博客文，然后导出来，放到对应的文件夹上面就可以形成对应的页面，更新文章则放置在_posts文件夹中）</p>
 
 		  	  
 	</div>
 
 	<div class="article-bottom">
-		<a class="article-readmore" href="/Jetmet/2018/09/17/hello-world/">阅读更多</a> 	
+		<a class="article-readmore" href="/Jetmet/2018/09/18/hexo搭建/">阅读更多</a> 	
 	</div>	
     
 </article>     
@@ -182,7 +180,7 @@
      <div class="mobile-menu">      
 
       
-      <img class="mobile-menu-icon" src="/images/favicon.png">   
+      <img class="mobile-menu-icon lazyload" src="/images/placeholder.png" data-src="/images/favicon.png">   
       
 
          
