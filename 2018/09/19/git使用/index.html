@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=yes">
   
   
-  <title>  Hexo 搭建和部署以及出错的原因 |   web前端工程师博客 </title>
+  <title>  Git操作 |   web前端工程师博客 </title>
 
  
   
@@ -79,20 +79,20 @@
 	<div class="post-header">
 
 	<p class="post-title">	
-		hexo 搭建和部署以及出错的原因
+		git操作
 	</p>
 			
 
 	<div class="meta-info">	
 	<span>
-		9月 18, 2018
+		9月 19, 2018
 	</span>
 
 	
 	
 		<i class="iconfont icon-words"></i>
 		<span>
-			1149
+			358
 		</span>
 	
 </div>
@@ -105,13 +105,8 @@
 		
 
 			
-					<h3 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h3><p>建一个关于已hexo为平台的博客网站，官方中文<br>文档网址为<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/</a>；参考里面的要求一步步进行安装<br>1.电脑上必须安装有 Node.js 和Git应用，因为hexo是搭载在这两个平台上<br>进行运行的，<br>2.安装完成以上两部后，你可以在自己想要把你的博客放置到您任意的硬盘上，<br>新建文件夹，（但最好不要放置在C盘上）。在新建的文件上使用git bash在这个文件夹里面<br>进行安装hexo 指令{ $ npm install -g hexo-cli}<br>3.初始化hexo{ $ hexo init } ,配置node {$ npm install },加载hexo{$ hexo g},此时会将hexo经典默认的模板生成一个public文件夹，里面的东西来自于source，当你点击public里index.html里面出来的东西是个 无样式的页面，因为在本地我们需要启动服务器才能运行，<br>4.启动服务器{$ hexo s}此时命令框上会显示出让你将localhost:4000地址复制到浏览器窗口上，并成功显示出了你的主题模板的样式结构，到此您的hexo初步已经圆满成功</p>
-<p>接下来，hexo官方给我们提供了各种不同主题模板，你也可以上github上搜索自己喜欢的主题模板，人家下载下来，将模板放置到你之前新建博客的文件中的theme文件中，放置好后，我们需要配置加载，所以找到_config.yml（很多重要的配置都是在这个文件进行修改）文件<img src="clipboard.png" alt=""></p>
-<p>将文件中的theme改成你下载好的主题文件夹名称，文件夹注意不要使用特殊符号；<br>然后再次运行服务器，就可以看到你下载的主题框架结构了</p>
-<p>然而对于hexo主题框架，一般提供给我们的页面有archives，但当我们自己新建自己需要的页面的时候，可以在根目录进行使用命令{$ hexo new page 你的页面名}，然后还要在两个地方进行修改，<br>第一 个是根目录上的    \source\你的页面名 修改md文件，比如关于about页面<img src="clipboard1.png" alt=""></p>
-<p>第二步则是在根目录\thjeme(对应主题名)_config.yml 打开 找到menu添加导航菜单</p>
-<p><img src="clipboard2.png" alt=""></p>
-<h3 id="第一阶段总结"><a href="#第一阶段总结" class="headerlink" title="第一阶段总结"></a>第一阶段总结</h3><p>：由以上的操作，我们可以总结得出，在你需要修改关于主题的一些图片、名称样式等的时候，都是在主题目录上的配置项进行修改，而当你部署整个项目的时候则是在根目录下的配置文件进行更改和部署（还有一点就是当我们把基本的样式和部署都修改完成之后，我们只需要在根目录上修改源文件source里对应的页面文件夹中修改对应的md文件，使用的markdown格式进行的修改，可以下载Typora或者在CSDN博客网上进行新建博客文，使用的都是markdown格式进行书写博客文，然后导出来，放到对应的文件夹上面就可以形成对应的页面，更新文章则放置在_posts文件夹中）</p>
+					<h3 id="有关分支的操作"><a href="#有关分支的操作" class="headerlink" title="有关分支的操作"></a>有关分支的操作</h3><p>查看本地和远程所以分支{git branch -a}<br>删除本地分支{git branch -D 分支名称}<br>删除远程分支{git push origin -d 远程分支的名称}<br>创建本地分支并切换到分支{git checkout -b 分支名称}<br>在当前分支创建分支{git branch 分支名称}（当前为master分支的时候和上面创建的分支一样，）【在创建分支的时候，分支总是以当前的分支内容的起点来进行内容增加减少的修改】<br>查看修改过的内容状态{git status}<br>将内容提交到暂存区{git add .}<br>将内容提交到本地仓库区{git commit -m “这里解释文本”}<br>将分支提交到远程分支仓库区中去，假如远程分支还没有，则同时创建{git push origin 本地分区名}</p>
+<h3 id="主分支的操作"><a href="#主分支的操作" class="headerlink" title="主分支的操作"></a>主分支的操作</h3><p>主分支的 操作和分支的操作差不多，甚至比分支还简单</p>
   	
 					
 	  </div>     
@@ -137,7 +132,7 @@
 
 	<div class="donate-img-box">
 		<img id="donate-qr-wechat" class="noLazyLoad donate-img" src="/Jetmet/images/donate1.png" alt="No Donate Image!">	
-		<img id="donate-qr-alipay" class="noLazyLoad donate-img lazyload" src="/images/placeholder.png" alt="No Donate Image!" data-src="/Jetmet/images/donate2.png">	
+		<img id="donate-qr-alipay" class="noLazyLoad donate-img" src="/Jetmet/images/donate2.png" alt="No Donate Image!">	
 	</div>
 
 	<span class="donate-word">世界美好 你也是</span>
@@ -195,15 +190,15 @@
 
 <nav class="post-footer-nav">
   
+  
     <div class="post-footer-link">
-      <a href="/Jetmet/2018/09/19/git使用/" id="post-nav-newer" class="post-nav-link-wrap">
-        <strong class="post-nav-caption">newer</strong>
-           
-          <a class="post-nav-title" href="/Jetmet/2018/09/19/git使用/">
-          git操作</a>
+      <a href="/Jetmet/2018/09/18/hexo搭建/" id="post-nav-older" class="post-nav-link-wrap">
+        <strong class="post-nav-caption">older</strong>
+        
+          <a class="post-nav-title" href="/Jetmet/2018/09/18/hexo搭建/">
+          hexo 搭建和部署以及出错的原因</a>
       </a>
     </div>
-  
   
 </nav>
  
@@ -217,7 +212,7 @@
 				CONTENT
 			</p>
 			<div class="toc-list">
-				<ol class="toc-inner"><li class="toc-inner-item toc-inner-level-3"><a class="toc-inner-link" href="#搭建"><span class="toc-inner-text">搭建</span></a></li><li class="toc-inner-item toc-inner-level-3"><a class="toc-inner-link" href="#第一阶段总结"><span class="toc-inner-text">第一阶段总结</span></a></li></ol>
+				<ol class="toc-inner"><li class="toc-inner-item toc-inner-level-3"><a class="toc-inner-link" href="#有关分支的操作"><span class="toc-inner-text">有关分支的操作</span></a></li><li class="toc-inner-item toc-inner-level-3"><a class="toc-inner-link" href="#主分支的操作"><span class="toc-inner-text">主分支的操作</span></a></li></ol>
 			</div>
 		</div>
 	</div>
@@ -246,7 +241,7 @@
      <div class="mobile-menu">      
 
       
-      <img class="mobile-menu-icon lazyload" src="/images/placeholder.png" data-src="/images/favicon.png">   
+      <img class="mobile-menu-icon" src="/images/favicon.png">   
       
 
          
